@@ -7,7 +7,7 @@
 <title>Cornell Credit Investment Club</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper: #FFFFFF;
@@ -28,7 +28,7 @@
     margin: 0;
     background: var(--paper);
     color: var(--ink);
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 17px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -58,7 +58,7 @@
     align-items: center;
   }
   .brand {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 1.02rem;
     font-weight: 600;
     letter-spacing: 0.01em;
@@ -78,6 +78,7 @@
     white-space: nowrap;
   }
   nav a:hover { color: #FFFFFF; border-color: #FFFFFF; }
+  nav a.active { color: #FFFFFF; border-color: #FFFFFF; }
   nav a.apply {
     color: var(--paper);
     background: var(--oxblood);
@@ -97,7 +98,7 @@
     margin-bottom: 18px;
   }
   h1 {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-weight: 500;
     font-size: clamp(2.3rem, 6vw, 3.6rem);
     line-height: 1.1;
@@ -143,6 +144,8 @@
   /* ---------- Section shell ---------- */
   section { padding: 76px 0; border-bottom: 1px solid var(--rule); }
   section:last-of-type { border-bottom: none; }
+  .tab-section { display: none; }
+  .tab-section.active { display: block; }
   .section-head { margin-bottom: 40px; }
   .section-head .eyebrow {
     font-family: 'IBM Plex Mono', monospace;
@@ -151,7 +154,7 @@
     margin-bottom: 10px;
   }
   h2 {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-weight: 500;
     font-size: 2rem;
     margin: 0;
@@ -166,7 +169,7 @@
   }
   .about-grid p { color: var(--ink-soft); margin: 0 0 18px; max-width: 48ch; }
   .about-grid p.pull {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 1.35rem;
     color: var(--ink);
     line-height: 1.4;
@@ -193,7 +196,7 @@
   }
   .step:last-child { border-bottom: 1px solid var(--rule); }
   .step .n { font-family: 'IBM Plex Mono', monospace; color: var(--oxblood); font-size: 0.95rem; padding-top: 2px; }
-  .step h3 { font-family: 'Source Serif 4', serif; font-size: 1.15rem; font-weight: 600; margin: 0 0 6px; }
+  .step h3 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 1.15rem; font-weight: 600; margin: 0 0 6px; }
   .step p { margin: 0; color: var(--ink-soft); max-width: 54ch; }
 
   /* ---------- Our Team ---------- */
@@ -217,7 +220,7 @@
     height: 100%;
     object-fit: cover;
   }
-  .team-card .name { font-family: 'Source Serif 4', serif; font-size: 1.02rem; margin-bottom: 3px; }
+  .team-card .name { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 1.02rem; margin-bottom: 3px; }
   .team-card .role { font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; color: var(--oxblood); margin-bottom: 10px; }
   .team-card .bio { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.55; }
   .team-card .bio.muted { font-style: italic; color: var(--rule-dark); }
@@ -256,7 +259,7 @@
     object-fit: contain;
   }
   .placement-mark .fallback {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--oxblood);
@@ -321,13 +324,13 @@
     color: var(--oxblood);
     padding-top: 2px;
   }
-  .event-row h3 { font-family: 'Source Serif 4', serif; font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
+  .event-row h3 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
   .event-row p { margin: 0; color: var(--ink-soft); max-width: 54ch; }
   @media (max-width: 560px) {
     .event-row { grid-template-columns: 1fr; gap: 6px; }
   }
   .join-box {
-    border: none;
+    border: 1px solid var(--oxblood);
     background: #DAE9E5;
     padding: 48px 40px;
     text-align: center;
@@ -348,7 +351,7 @@
     padding-bottom: 28px;
     border-bottom: 1px solid var(--rule);
   }
-  footer .brand-small { font-family: 'Source Serif 4', serif; font-size: 1.05rem; margin-bottom: 6px; }
+  footer .brand-small { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 1.05rem; margin-bottom: 6px; }
   footer .tagline { color: var(--ink-soft); font-size: 0.9rem; max-width: 34ch; }
   .foot-links { display: flex; gap: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; }
   .foot-links a { text-decoration: none; color: var(--ink-soft); border-bottom: 1px solid var(--rule-dark); }
@@ -403,7 +406,7 @@
     background: var(--paper-dim);
   }
   .detail-avatar img { width: 100%; height: 100%; object-fit: cover; }
-  .detail-name { font-family: 'Source Serif 4', serif; font-size: 1.5rem; margin-bottom: 6px; }
+  .detail-name { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 1.5rem; margin-bottom: 6px; }
   .detail-role { font-size: 0.85rem; color: var(--oxblood); margin-bottom: 18px; }
   .detail-bio { color: var(--ink-soft); line-height: 1.65; max-width: 56ch; }
   @media (max-width: 560px) {
@@ -416,16 +419,16 @@
 
 <header>
   <div class="header-inner">
-    <a class="brand" href="#top">Cornell Credit Investment Club</a>
+    <a class="brand" href="#" onclick="hideAllTabs(event)">Cornell Credit Investment Club</a>
     <div class="header-right">
-      <nav>
-        <a href="#about">Our Mission</a>
-        <a href="#what-is-credit">Credit Investing</a>
-        <a href="#process">What We Do</a>
-        <a href="#team">Members</a>
-        <a href="#placements">Placements</a>
-        <a href="#events">Events</a>
-        <a href="#join">Spring 2027</a>
+      <nav id="main-nav">
+        <a href="#" data-tab="about" onclick="showTab(event, 'about')">Our Mission</a>
+        <a href="#" data-tab="what-is-credit" onclick="showTab(event, 'what-is-credit')">Credit Investing</a>
+        <a href="#" data-tab="process" onclick="showTab(event, 'process')">What We Do</a>
+        <a href="#" data-tab="team" onclick="showTab(event, 'team')">Members</a>
+        <a href="#" data-tab="placements" onclick="showTab(event, 'placements')">Placements</a>
+        <a href="#" data-tab="events" onclick="showTab(event, 'events')">Events</a>
+        <a href="#" data-tab="join" onclick="showTab(event, 'join')">Spring 2027</a>
       </nav>
 <img class="header-mark" src="brand/header-logo.png" alt="Cornell Credit Investment Club logo">
     </div>
@@ -440,7 +443,7 @@
   </div>
 </div>
 
-<section id="about">
+<section id="about" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow mono">Our Mission</div>
@@ -459,7 +462,7 @@
   </div>
 </section>
 
-<section id="what-is-credit">
+<section id="what-is-credit" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow mono">The Basics</div>
@@ -469,7 +472,7 @@
   </div>
 </section>
 
-<section id="process">
+<section id="process" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow mono">What We Do</div>
@@ -501,7 +504,7 @@
   </div>
 </section>
 
-<section id="team">
+<section id="team" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow mono">Members</div>
@@ -544,7 +547,7 @@
   </div>
 </section>
 
-<section id="placements">
+<section id="placements" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow mono">Placements</div>
@@ -569,7 +572,7 @@
   </div>
 </section>
 
-<section id="events">
+<section id="events" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow mono">Fall Semester</div>
@@ -601,7 +604,7 @@
   </div>
 </section>
 
-<section id="join">
+<section id="join" class="tab-section">
   <div class="wrap">
     <div class="join-box">
       <div class="eyebrow mono">Spring Semester</div>
@@ -635,6 +638,34 @@
 </footer>
 
 
+<script>
+  function showTab(evt, id) {
+    if (evt) evt.preventDefault();
+    document.querySelectorAll('.tab-section').forEach(function(sec) {
+      sec.classList.remove('active');
+    });
+    document.querySelectorAll('#main-nav a').forEach(function(a) {
+      a.classList.remove('active');
+    });
+    var target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+      target.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+    var link = document.querySelector('#main-nav a[data-tab="' + id + '"]');
+    if (link) link.classList.add('active');
+  }
+  function hideAllTabs(evt) {
+    if (evt) evt.preventDefault();
+    document.querySelectorAll('.tab-section').forEach(function(sec) {
+      sec.classList.remove('active');
+    });
+    document.querySelectorAll('#main-nav a').forEach(function(a) {
+      a.classList.remove('active');
+    });
+    document.getElementById('top').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+</script>
 <script>
   const membersData = {"anika": {"role": "CO-FOUNDER & CO-PRESIDENT", "bio": "Anika is a senior studying Applied Economics and Management from Staten Island, NY. On campus, she is the New Member Educator for South Asian Business Association and a Dyson Finance Career Catalyst Coach, and is involved in Cayuga Capital, Impact Investing, and Women in Poker. Previously, she interned in Sourcing and Origination at Oaktree. This past summer, she was a Summer Analyst at Audax Private Debt, where she will be returning full-time. In her free time, she enjoys playing tennis, poker, trying new restaurants, and going to DJ shows."}, "sahil": {"role": "CO-FOUNDER & CO-PRESIDENT", "bio": "Sahil Voona is a senior from New Jersey majoring in Applied Economics and Management. On campus, he is New Member Educator for South Asian Business Association and is actively involved with Cornell Investment Banking Club and Alpha Fund. This past summer, he was Summer Analyst at Bain Capital Credit, where he will be returning full-time. Sahil enjoys playing basketball, watching movies, and supporting the New York Knicks and Giants."}, "vansh": {"role": "CO-PRESIDENT", "bio": "Vansh is a senior studying Applied Economics and Management and Information Science from Mumbai, India. On campus, he is involved in Cornell Finance Club, Cornell Investment Banking Club, South Asian Business Association, and Impact Investing. This past summer, he worked as a Private Credit Summer Analyst at Ares Management, where he will be returning full-time. In his free time, he enjoys working out and following Substack and startups."}, "angela": {"role": "CO-FOUNDER & CO-VP", "bio": "Angela is a junior studying Information Science from Beijing, China. On campus, she is the VP of External Relations for Diversity on the Street and is involved in Alpha Fund, Strong Women in Business, the Big Red Pep Band, and the Aikido Club. Previously, she interned at Young America Capital as an Investment Banking Analyst, and this upcoming summer, she will be a Summer Analyst at Blackstone. In her free time, she loves playing tennis and badminton, playing the saxophone and drums, hanging out with friends, watching movies, working on startups, and meditating."}, "riya": {"role": "CO-VP", "bio": "Riya is a junior studying Applied Economics and Management from Scarsdale, NY. On campus, she is involved in Banking at Cornell, Cornell Alternative Investments, Dyson Ambassadors, and the Dyson Undergraduate Council. She also serves as a course assistant for AEM 2700: Management Communication. She previously interned at BankUnited as a Summer Analyst and Incedo as an AI Product Summer Intern. This upcoming summer, she will be joining Brinley Partners as a Private Credit Summer Analyst. In her free time, she loves traveling, spending time with friends and family, reading, and trying new restaurants."}};
   function showMember(id) {
