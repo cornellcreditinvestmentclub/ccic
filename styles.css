@@ -504,16 +504,25 @@ h3 {
 }
 .join-btn {
   display: inline-block;
-  margin-top: 28px;
-  padding: 14px 32px;
+  margin-top: 32px;
+  padding: 16px 44px;
   background: var(--forest);
   color: #FFFFFF;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  border: 1px solid var(--forest);
-  transition: background 0.2s ease, color 0.2s ease;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0, 58, 44, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-.join-btn:hover { background: transparent; color: var(--forest); }
+.join-btn:hover {
+  background: #00503C;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 58, 44, 0.3);
+}
+.join-btn:active { transform: translateY(0); }
+.join-btn:focus-visible { outline: 3px solid var(--forest); outline-offset: 3px; }
 
 footer {
   padding: 48px 0 56px;
