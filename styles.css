@@ -502,6 +502,18 @@ h3 {
   max-width: 52ch;
   margin: 0 auto;
 }
+.join-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: var(--forest);
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--forest);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.join-btn:hover { background: transparent; color: var(--forest); }
 
 footer {
   padding: 48px 0 56px;
