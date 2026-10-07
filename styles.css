@@ -350,18 +350,19 @@ h3 {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 32px 22px;
 }
 .team-card {
   display: block;
-  width: 100%;
+  width: calc((100% - 88px) / 5);
   margin: 0;
   padding: 0;
   border: 0;
   background: none;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -606,7 +607,7 @@ footer .tagline {
     align-items: center;
   }
   nav a:last-child { border-bottom: 0; }
-  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .team-card { width: calc((100% - 44px) / 3); }
 }
 
 @media (max-width: 800px) {
@@ -630,7 +631,8 @@ footer .tagline {
   .brand span { font-size: 0.92rem; }
   .step { grid-template-columns: 1fr; gap: 8px; }
   .event-row { grid-template-columns: 1fr; gap: 6px; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+  .team-grid { gap: 24px 16px; }
+  .team-card { width: calc((100% - 16px) / 2); }
   .placements-track { gap: 52px; }
   .placement-logo { height: 42px; max-width: 120px; }
   .foot-links { flex-wrap: wrap; gap: 16px; }
